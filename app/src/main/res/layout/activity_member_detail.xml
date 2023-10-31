@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Nome do Membro"
+        android:text="@string/nome_do_membro"
         />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_below="@+id/memberNameTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Valor Pago: R$ 0.00"
+        android:text="@string/valor_pago_r_0_00"
         />
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_below="@+id/amountPaidTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Item Comprado: Nenhum"
+        android:text="@string/item_comprado_nenhum"
         />
 
     <TextView
@@ -43,7 +43,7 @@
         android:layout_below="@+id/itemBoughtTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Valor a receber: R$ 0.00"
+        android:text="@string/valor_a_receber_r_0_00"
         />
 
     <TextView
@@ -53,6 +53,6 @@
         android:layout_below="@+id/amountToReceiveTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Valor a pagar: R$ 0.00"
+        android:text="@string/valor_a_pagar_r_0_00"
         />
 </RelativeLayout>

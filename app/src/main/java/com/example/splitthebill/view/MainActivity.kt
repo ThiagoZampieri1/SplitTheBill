@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         println(groupMembers)
     }
 
-    fun CalculateAmountToReceive(groupNumber: Int, total: Double, amountPaid: Double): Double{
+    private fun CalculateAmountToReceive(groupNumber: Int, total: Double, amountPaid: Double): Double{
         val amountToReceive: Double;
         if (groupNumber == 1){
             amountToReceive = 0.0;
@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         return amountToReceive;
     }
 
-    fun CalculateAmountToPay(groupNumber: Int, total: Double, amountPaid: Double): Double{
+    private fun CalculateAmountToPay(groupNumber: Int, total: Double, amountPaid: Double): Double{
         val AmountToPay: Double;
         if (groupNumber == 1){
             AmountToPay = 0.0;
