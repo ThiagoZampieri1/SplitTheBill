@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="@string/adicionar_membro"
+        android:text="Adicionar Membro"
+        android:onClick="showAddMemberDialog"
         />
 
     <Button
