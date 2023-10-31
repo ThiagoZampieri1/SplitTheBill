@@ -41,6 +41,28 @@ class MainActivity : AppCompatActivity() {
 
                 startActivity(intent)
             }
+
+        amb.listView.onItemLongClickListener = AdapterView.OnItemLongClickListener { parent, view, position, id ->
+
+            val selectedMember = groupMembers[position]
+
+            val dialog = AlertDialog.Builder(this)
+                .setTitle("Excluir membro")
+                .setMessage("Tem certeza de que deseja excluir esse membro?")
+                .setPositiveButton("Sim") { _, _ ->
+
+                    groupMembers.remove(selectedMember)
+
+                    memberAdapter.notifyDataSetChanged()
+
+                }
+                .setNegativeButton("Cancelar", null)
+                .create()
+
+            dialog.show()
+
+            true
+        }
     }
     fun showAddMemberDialog(view: View) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_add_member, null)

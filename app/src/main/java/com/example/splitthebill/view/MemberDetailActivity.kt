@@ -1,15 +1,19 @@
 package com.example.splitthebill.view
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.splitthebill.R
 import com.example.splitthebill.databinding.ActivityMainBinding
+import com.example.splitthebill.model.Member
 
 class MemberDetailActivity : AppCompatActivity() {
     private val mda: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+    private lateinit var member: Member
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_member_detail)
@@ -31,5 +35,6 @@ class MemberDetailActivity : AppCompatActivity() {
         itemBoughtTextView.text = "Item comprado: $itemBought"
         amountToReceiveTextView.text = "Valor a receber: R$ $amountToReceive"
         amountToPayTextView.text = "Valor a ser pago: R$ $amountToPay"
-    }
+
+}
 }
