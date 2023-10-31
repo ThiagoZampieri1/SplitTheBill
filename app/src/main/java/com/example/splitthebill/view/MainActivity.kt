@@ -35,8 +35,13 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, MemberDetailActivity::class.java)
 
                 intent.putExtra("memberName", selectedMember.name)
-                intent.putExtra("amountPaid", selectedMember.amountPaid)
-                intent.putExtra("itemBought", selectedMember.itemBought)
+                intent.putExtra("amountPaid", (selectedMember.itemPrice1 + selectedMember.itemPrice2 + selectedMember.itemPrice3))
+                intent.putExtra("item1", selectedMember.itemBought1)
+                intent.putExtra("item2", selectedMember.itemBought2)
+                intent.putExtra("item3", selectedMember.itemBought3)
+                intent.putExtra("itemPrice1", selectedMember.itemPrice1)
+                intent.putExtra("itemPrice2", selectedMember.itemPrice2)
+                intent.putExtra("itemPrice3", selectedMember.itemPrice3)
                 intent.putExtra("amountToReceive", selectedMember.amountToReceive)
 
                 startActivity(intent)
@@ -67,18 +72,27 @@ class MainActivity : AppCompatActivity() {
     fun showAddMemberDialog(view: View) {
         val dialogView = layoutInflater.inflate(R.layout.dialog_add_member, null)
         val nameEditText = dialogView.findViewById<EditText>(R.id.nameEditText)
-        val amountPaidEditText = dialogView.findViewById<EditText>(R.id.amountPaidEditText)
-        val itemBoughtEditText = dialogView.findViewById<EditText>(R.id.itemBoughtEditText)
+        val itemBought1EditText = dialogView.findViewById<EditText>(R.id.itemBought1EditText)
+        val itemBought2EditText = dialogView.findViewById<EditText>(R.id.itemBought2EditText)
+        val itemBought3EditText = dialogView.findViewById<EditText>(R.id.itemBought3EditText)
+        val itemPrice1EditText = dialogView.findViewById<EditText>(R.id.Item1EditText)
+        val itemPrice2EditText = dialogView.findViewById<EditText>(R.id.Item2EditText)
+        val itemPrice3EditText = dialogView.findViewById<EditText>(R.id.Item3EditText)
 
         val dialog = AlertDialog.Builder(this)
             .setTitle("Adicionar Membro")
             .setView(dialogView)
             .setPositiveButton("Adicionar") { _, _ ->
                 val name = nameEditText.text.toString()
-                val amountPaid = amountPaidEditText.text.toString().toDouble()
-                val itemBought = itemBoughtEditText.text.toString()
+                val itemBought1 = itemBought1EditText.text.toString()
+                val itemBought2 = itemBought2EditText.text.toString()
+                val itemBought3 = itemBought3EditText.text.toString()
+                val itemPrice1 = itemPrice1EditText.text.toString().toDouble()
+                val itemPrice2 = itemPrice2EditText.text.toString().toDouble()
+                val itemPrice3 = itemPrice3EditText.text.toString().toDouble()
+                val amountPaid = itemPrice1 + itemPrice2 + itemPrice3
 
-                val newMember = Member(name, amountPaid, itemBought,  0.0, 0.0 )
+                val newMember = Member(name, amountPaid, itemPrice1, itemPrice2, itemPrice3, itemBought1, itemBought2, itemBought3,  0.0, 0.0 )
                 groupMembers.add(newMember)
 
                 memberAdapter.notifyDataSetChanged()

@@ -4,10 +4,14 @@
     <string name="adicionar_membro">Adicionar Membro</string>
     <string name="nome_do_membro">Nome do Membro</string>
     <string name="valor_pago_r_0_00">Valor Pago: R$ 0.00</string>
-    <string name="item_comprado_nenhum">Item Comprado: Nenhum</string>
+    <string name="item_comprado_nenhum_1">Primeiro item Comprado: Nenhum</string>
+    <string name="item_comprado_nenhum_2">Segundo item Comprado: Nenhum</string>
+    <string name="item_comprado_nenhum_3">Terceiro item Comprado: Nenhum</string>
     <string name="valor_a_receber_r_0_00">Valor a receber: R$ 0.00</string>
     <string name="valor_a_pagar_r_0_00">Valor a pagar: R$ 0.00</string>
     <string name="nome_do_integrante">Nome do Integrante</string>
     <string name="valor_pago">Valor Pago</string>
-    <string name="item_comprado">Item Comprado</string>
+    <string name="item_comprado_1">Primeiro item Comprado</string>
+    <string name="item_comprado_2">Segundo item Comprado</string>
+    <string name="item_comprado_3">Terceiro item Comprado</string>
 </resources>

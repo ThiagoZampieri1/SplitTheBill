@@ -14,17 +14,47 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/amountPaidEditText"
+        android:id="@+id/Item1EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/valor_pago"
         android:inputType="numberDecimal" />
 
     <EditText
-        android:id="@+id/itemBoughtEditText"
+        android:id="@+id/itemBought1EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/item_comprado"
+        android:hint="@string/item_comprado_1"
         android:inputType="text" />
+
+    <EditText
+        android:id="@+id/Item2EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valor_pago"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/itemBought2EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_comprado_2"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/Item3EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/valor_pago"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/itemBought3EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_comprado_3"
+        android:inputType="text" />
+
+
 
 </LinearLayout>
