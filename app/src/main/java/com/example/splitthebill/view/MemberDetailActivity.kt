@@ -17,13 +17,19 @@ class MemberDetailActivity : AppCompatActivity() {
         val memberNameTextView = findViewById<TextView>(R.id.memberNameTextView)
         val amountPaidTextView = findViewById<TextView>(R.id.amountPaidTextView)
         val itemBoughtTextView = findViewById<TextView>(R.id.itemBoughtTextView)
+        val amountToReceiveTextView = findViewById<TextView>(R.id.amountToReceiveTextView)
+        val amountToPayTextView = findViewById<TextView>(R.id.amountToPayTextView)
 
         val memberName = intent.getStringExtra("memberName")
         val amountPaid = intent.getDoubleExtra("amountPaid", 0.0)
         val itemBought = intent.getStringExtra("itemBought")
+        val amountToReceive = intent.getDoubleExtra("amountToReceive", 0.0)
+        val amountToPay = intent.getDoubleExtra("amountToPay", 0.0)
 
         memberNameTextView.text = memberName
         amountPaidTextView.text = "Valor pago: R$ $amountPaid"
         itemBoughtTextView.text = "Item comprado: $itemBought"
+        amountToReceiveTextView.text = "Valor a receber: R$ $amountToReceive"
+        amountToPayTextView.text = "Valor a ser pago: R$ $amountToPay"
     }
 }

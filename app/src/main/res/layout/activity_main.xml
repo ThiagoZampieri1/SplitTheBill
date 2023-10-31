@@ -25,6 +25,7 @@
         android:layout_below="@+id/btnAddMember"
         android:layout_marginTop="16dp"
         android:text="@string/calcular_racha"
+        android:onClick="shareTheBill"
         />
 
     <ListView

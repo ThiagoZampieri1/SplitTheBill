@@ -15,7 +15,7 @@ class MemberAdapter (
     context: Context,
     private val groupMembers: MutableList<Member>
 ): ArrayAdapter<Member>(context, R.layout.activity_member_detail, groupMembers) {
-    private data class TilesMembersHolder(val memberName: TextView, val amountPaid: TextView, val itemBought: TextView)
+    private data class TilesMembersHolder(val memberName: TextView, val amontPaid: TextView, val item: TextView, val amountToReceive: TextView, val amountToPay: TextView)
 
     private lateinit var amd: ActivityMemberDetailBinding
 
@@ -30,14 +30,16 @@ class MemberAdapter (
                 false
             )
             convertView = amd.root;
-            val tileIntegrantesHolder = TilesMembersHolder(amd.memberNameTextView, amd.amountPaidTextView, amd.itemBoughtTextView)
+            val tileIntegrantesHolder = TilesMembersHolder(amd.memberNameTextView, amd.amountPaidTextView, amd.itemBoughtTextView, amd.amountToReceiveTextView, amd.amountToPayTextView)
             convertView.tag = tileIntegrantesHolder
         }
 
         with (convertView.tag as TilesMembersHolder){
             memberName.text = "Nome: " + member.name
-            amountPaid.text = "Valor Pago: " + member.amountPaid
-            itemBought.text= "Item comprado: " + member.itemBought
+            amontPaid.text = "Valor pago: " + member.amountPaid
+            item.text = "Item comprado: " + member.itemBought
+            amountToReceive.text = "Valor a receber: " + member.amountToReceive
+            amountToPay.text= "Valor a pagar: " + member.amountToPay
         }
 
         return convertView;

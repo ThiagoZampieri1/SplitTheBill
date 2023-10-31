@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 val amountPaid = amountPaidEditText.text.toString().toDouble()
                 val itemBought = itemBoughtEditText.text.toString()
 
-                val newMember = Member(name, amountPaid, itemBought,  0.0 )
+                val newMember = Member(name, amountPaid, itemBought,  0.0, 0.0 )
                 groupMembers.add(newMember)
 
                 memberAdapter.notifyDataSetChanged()
@@ -65,6 +65,46 @@ class MainActivity : AppCompatActivity() {
             .create()
 
         dialog.show()
+    }
+
+    fun shareTheBill(view: View){
+        var total: Double =  0.0
+        for (member in groupMembers) {
+            total+=member.amountPaid;
+        }
+        for (member in groupMembers) {
+            member.amountToReceive = CalculateAmountToReceive(groupMembers.size, total, member.amountPaid)
+            member.amountToPay = CalculateAmountToPay(groupMembers.size, total, member.amountPaid)
+        }
+        memberAdapter.notifyDataSetChanged()
+        println(groupMembers)
+    }
+
+    fun CalculateAmountToReceive(groupNumber: Int, total: Double, amountPaid: Double): Double{
+        val amountToReceive: Double;
+        if (groupNumber == 1){
+            amountToReceive = 0.0;
+        }  else if (amountPaid > (total / groupNumber)) {
+            amountToReceive = ((total / groupNumber) - amountPaid) * (-1);
+        } else{
+            amountToReceive = 0.0
+        }
+        return amountToReceive;
+    }
+
+    fun CalculateAmountToPay(groupNumber: Int, total: Double, amountPaid: Double): Double{
+        val AmountToPay: Double;
+        if (groupNumber == 1){
+            AmountToPay = 0.0;
+        } else if (amountPaid == 0.0) {
+            AmountToPay = total / groupNumber;
+        }
+        else if (amountPaid < (total / groupNumber)) {
+            AmountToPay = (total / groupNumber) - amountPaid;
+        } else {
+            AmountToPay = 0.0
+        }
+        return AmountToPay;
     }
 
 }
