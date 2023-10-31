@@ -11,7 +11,7 @@
     <string name="valor_a_pagar_r_0_00">Valor a pagar: R$ 0.00</string>
     <string name="nome_do_integrante">Nome do Integrante</string>
     <string name="valor_pago">Valor Pago</string>
-    <string name="item_comprado_1">Primeiro item Comprado</string>
+    <string name="item_comprado_1">Itens Comprado</string>
     <string name="item_comprado_2">Segundo item Comprado</string>
     <string name="item_comprado_3">Terceiro item Comprado</string>
 </resources>

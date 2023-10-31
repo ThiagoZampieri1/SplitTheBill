@@ -17,17 +17,7 @@
         />
 
     <TextView
-        android:id="@+id/itemPrice1TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemBought1TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/valor_pago_r_0_00"
-        />
-
-    <TextView
-        android:id="@+id/itemBought1TextView"
+        android:id="@+id/itemBoughtTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/amountPaidTextView"
@@ -46,52 +36,12 @@
         android:text="@string/valor_pago_r_0_00"
         />
 
-    <TextView
-        android:id="@+id/itemPrice2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemBought2TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/valor_pago_r_0_00"
-        />
-
-    <TextView
-        android:id="@+id/itemBought2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemPrice1TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/item_comprado_nenhum_2"
-        />
-
-    <TextView
-        android:id="@+id/itemPrice3TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemBought3TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/valor_pago_r_0_00"
-        />
-
-    <TextView
-        android:id="@+id/itemBought3TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/itemPrice2TextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/item_comprado_nenhum_3"
-        />
-
 
     <TextView
         android:id="@+id/amountToReceiveTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/itemPrice3TextView"
+        android:layout_below="@+id/itemBoughtTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/valor_a_receber_r_0_00"
